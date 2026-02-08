@@ -1,7 +1,13 @@
+@font-face {
+    font-family: 'Pixelify Sans';
+    src: url('./PixelifySans-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900; /* because it’s a variable font */
+    font-style: normal;
+}
+
 body {
     /* background: linear-gradient(to bottom, #defeff, #72ebed); */
     background-image: url("BG.jpg");
-    font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
     display: flex;
     flex-direction: column; /* stack items vertically */
     align-items: center;    /* center horizontally */
@@ -9,6 +15,7 @@ body {
     min-height: 100vh;
     padding-top: 50px;
     cursor: url('https://cdn.custom-cursor.com/db/20236/32/color-aqua-cursor.png'), auto;
+    font-family: 'Pixelify Sans', sans-serif;
 }
 
 .logo {
@@ -16,6 +23,22 @@ body {
     max-width: 600px;
     height: auto;
     transition: transform 0.3s ease;
+}
+
+p, span, h1, h2, h3 {
+    display: inline-block;       /* necessary for transform */
+    transform: scaleY(1.2);        /* double height */
+    transform-origin: top left;  /* keeps letters anchored in place */
+}
+
+a {
+    color: yellow;       /* makes the link text yellow */
+    text-decoration: none; /* removes the underline */
+}
+
+a:hover {
+    color: #FFD700;      /* optional: brighter gold on hover */
+    text-decoration: underline; /* optional hover effect */
 }
 
 .logo:hover {
